@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\deskstop\Management_App\Management_App\obj\Debug\
+D:\deskstop\Management_App\Management_App\obj\Release\
 Management_App
 none
 false
-DEBUG;TRACE
+TRACE
 D:\deskstop\Management_App\Management_App\App.xaml
 5-1238248581
 
-12-575465518
+11266893849
 15-1966256578
 View\Card\card.xaml;View\Card\list.xaml;View\color\color.xaml;View\MainWindow.xaml;View\UserInformation.xaml;
 

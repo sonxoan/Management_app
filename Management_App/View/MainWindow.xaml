@@ -15,7 +15,7 @@
          FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="None"
         ResizeMode="NoResize"
-         Title="MainWindow" Height="600" Width="1100">
+         Title="MainWindow" Height="600" Width="1100"  WindowStartupLocation="CenterScreen">
 
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
@@ -35,11 +35,13 @@
 
             <!--chia cột-->
             <!--search-->
-            <Grid Grid.Row="1" >
+            <Border BorderBrush="Black" BorderThickness="0 0 0 1" Grid.Row="1">
+            <Grid >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="533"></ColumnDefinition>
                     <ColumnDefinition Width="auto" MinWidth="10"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+
                 <TextBox Background="WhiteSmoke" BorderBrush="#6699FF" Grid.Column="0" Grid.Row="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Nhập tên hoặc số điện thoại"
                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"  Width="400" Height="32"
                     VerticalAlignment="Center" />
@@ -53,11 +55,10 @@
                         </TransformGroup>
                     </materialDesign:PackIcon.RenderTransform>
                 </materialDesign:PackIcon>
-                <DatePicker Background="WhiteSmoke" Grid.Column="1"  materialDesign:HintAssist.Hint="Pick Date"
+                    <DatePicker Background="WhiteSmoke" Grid.Column="1"  materialDesign:HintAssist.Hint="Pick Date"
                         Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="0,5,-139,9" />
-
-
-            </Grid>
+                </Grid>
+            </Border>
 
 
 
@@ -70,15 +71,17 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
 
 
 
                 </Grid.ColumnDefinitions>
 
                 <!--Cột 1-->
-                <Border BorderBrush="Aquamarine" BorderThickness="0,0,1,0" Grid.Row="2" Grid.Column="0" >
-
-                    <Grid Margin="20,0,20,0" Width="260" >
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="0">
+                <Grid Margin="20,0,20,0" Width="260"  >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="60" ></RowDefinition>
                             <RowDefinition Height="40" ></RowDefinition>
@@ -91,7 +94,8 @@
                         </Grid.RowDefinitions>
 
                         <!--title list-->
-                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                    <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
 
                             <TextBox AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Center"
@@ -144,20 +148,397 @@
                                       Background="Aquamarine"
                                       Foreground="Black"
                                       UniformCornerRadius="6">
-                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" > i've something to say</Button>
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" >i've something to say</Button>
 
 
                             </materialDesign:Card>
                         </Grid>
-                        
+                        <Grid Grid.Row="3" Background="Aquamarine" Width="auto" Margin="5,5,5,5" Height="86"   >
+                            <materialDesign:Card
+                                      Background="Aquamarine"
+                                      Foreground="Black"
+                                      UniformCornerRadius="6">
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" >i've something to say</Button>
+
+
+                            </materialDesign:Card>
+                        </Grid>
+                        <Grid Grid.Row="4" Background="Aquamarine" Width="auto" Margin="5,5,5,5" Height="86"   >
+                            <materialDesign:Card
+                                      Background="Aquamarine"
+                                      Foreground="Black"
+                                      UniformCornerRadius="6">
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" >i've something to say</Button>
+
+
+                            </materialDesign:Card>
+                        </Grid>
+                        <Grid Grid.Row="5" Background="Aquamarine" Width="auto" Margin="5,5,5,5" Height="86"   >
+                            <materialDesign:Card
+                                      Background="Aquamarine"
+                                      Foreground="Black"
+                                      UniformCornerRadius="6">
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" >i've something to say</Button>
+
+
+                            </materialDesign:Card>
+                        </Grid>
+                        <Grid Grid.Row="6" Background="Aquamarine" Width="auto" Margin="5,5,5,5" Height="86"   >
+                            <materialDesign:Card
+                                      Background="Aquamarine"
+                                      Foreground="Black"
+                                      UniformCornerRadius="6">
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" >i've something to say</Button>
+
+
+                            </materialDesign:Card>
+                        </Grid>
                     </Grid>
                 </Border>
+                <!--hết cột 1-->
+                <!--Cột 2-->
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="1">
 
+                    <Grid Margin="20,0,20,0" Width="260" Grid.Column="1" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
 
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+
+                    </Grid>
+                </Border>
+                <!--hết cột 2-->
+                <!-- cột 3-->
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="2">
+                    <Grid Margin="20,0,20,0" Width="260" Grid.Column="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+                    </Grid>
+                </Border>
+                <!--hết cột 3-->
+                <!--Cột 4-->
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="3">
+                    <Grid Margin="20,0,20,0" Width="260" Grid.Column="3" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+
+                    </Grid>
+                </Border>
+                <!--hết cột 4-->
+                <!--Cột 5-->
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="4">
+                    <Grid Margin="20,0,20,0" Width="260" Grid.Column="4" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+                    </Grid>
+                </Border>
+                <!--hết cột 5-->
+                <!--cột 6-->
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" Grid.Column="5">
+                    <Grid Margin="20,0,20,0" Width="260" Grid.Column="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+
+                    </Grid>
+                </Border>
+                <!--hết cột 6-->
+
+                
             </Grid>
-            <!--Hàng 2-->
-
-            <!--tool-->
+          
 
 
         </Grid>
