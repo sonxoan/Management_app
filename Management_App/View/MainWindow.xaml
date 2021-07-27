@@ -1,0 +1,165 @@
+﻿<Window x:Class="Management_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Management_App"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+         Title="MainWindow" Height="600" Width="1100">
+
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid Background="#99CCFF"> 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" ></RowDefinition>
+                <!--hàng search-->
+                <RowDefinition Height="50" ></RowDefinition>
+                <!--hàng task-->
+                <RowDefinition></RowDefinition>
+
+                <RowDefinition Height="30"></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+
+            <!--chia cột-->
+            <!--search-->
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="533"></ColumnDefinition>
+                    <ColumnDefinition Width="auto" MinWidth="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Background="WhiteSmoke" BorderBrush="#6699FF" Grid.Column="0" Grid.Row="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Nhập tên hoặc số điện thoại"
+                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"  Width="400" Height="32"
+                    VerticalAlignment="Center" />
+                <materialDesign:PackIcon Grid.Column="0" Kind="Search" Opacity=".56" RenderTransformOrigin="1.354,0.438" Height="27" Margin="436,11,0,0" Width="36" >
+                    <materialDesign:PackIcon.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="3.18"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="1.203"/>
+                        </TransformGroup>
+                    </materialDesign:PackIcon.RenderTransform>
+                </materialDesign:PackIcon>
+                <DatePicker Background="WhiteSmoke" Grid.Column="1"  materialDesign:HintAssist.Hint="Pick Date"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="0,5,-139,9" />
+
+
+            </Grid>
+
+
+
+
+            <!--Hàng 3-->
+            <Grid Grid.Row="2" Margin="0,10,0,0" HorizontalAlignment="Left" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+
+
+                </Grid.ColumnDefinitions>
+
+                <!--Cột 1-->
+                <Border BorderBrush="Aquamarine" BorderThickness="0,0,1,0" Grid.Row="2" Grid.Column="0" >
+
+                    <Grid Margin="20,0,20,0" Width="260" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" ></RowDefinition>
+                            <RowDefinition Height="40" ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+
+                        </Grid.RowDefinitions>
+
+                        <!--title list-->
+                        <Grid Grid.Row="0" VerticalAlignment="Top" Background="#33CCFF" Height="60" >
+
+                            <TextBox AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"
+                                        HorizontalAlignment="Left" Width="120" 
+                                        FontSize="10" FontFamily="Segoe UI Light" Margin="10,10,0,10" />
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,5,0">
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,30,0" >
+                                <materialDesign:PackIcon Kind="Pencil" Height="16" Width="20"/>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Ellipse Fill="#DDDDDD	"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                        <!--thêm card-->
+                        <Grid Grid.Row="1" VerticalAlignment="Top" Height="40"  >
+                            <Button materialDesign:ButtonAssist.CornerRadius="25" BorderBrush="Transparent" BorderThickness="0" ToolTip="MaterialDesignFlatLightButton" 
+                                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                        Height="Auto" Margin="6,5" >
+                                <materialDesign:PackIcon Kind="PlusThick" Height="16" Width="20"/>
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#6699FF"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <!--card cột 1-->
+                        <Grid Grid.Row="2" Background="Aquamarine" Width="auto" Margin="5,5,5,5" Height="86"   >
+                            <materialDesign:Card
+                                      Background="Aquamarine"
+                                      Foreground="Black"
+                                      UniformCornerRadius="6">
+                                <Button VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" > i've something to say</Button>
+
+
+                            </materialDesign:Card>
+                        </Grid>
+                        
+                    </Grid>
+                </Border>
+
+
+            </Grid>
+            <!--Hàng 2-->
+
+            <!--tool-->
+
+
+        </Grid>
+    </ScrollViewer>
+</Window>

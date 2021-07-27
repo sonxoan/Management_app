@@ -1,0 +1,43 @@
+﻿<Window x:Class="Management_App.View.color.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Management_App.View.color"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStyle="None"
+        Title="Window1" Height="100" Width="100">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid>
+            <WrapPanel Background="AliceBlue">
+                <Rectangle Fill="#FF000000" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF111111" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF222222" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF333333" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF444444" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF555555" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF666666" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF777777" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF888888" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FF999999" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFAAAAAA" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFBBBBBB" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFCCCCCC" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFDDDDDD" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFEEEEEE" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFFFFFFF" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFEEEEEE" Height="10" Width="10" Stroke="Black"  />
+                <Rectangle Fill="#FFFFFFFF" Height="10" Width="10" Stroke="Black"  />
+            </WrapPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
