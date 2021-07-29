@@ -15,37 +15,40 @@
          FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
-        Title="UserInformation" Height="600" Width="700" WindowStartupLocation="CenterScreen" >
+        Title="UserInformation" Height="800" Width="710" WindowStartupLocation="CenterScreen" >
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
-        <Grid Background="	#CCFFCC">
+        <Grid Background="	#CCFFCC" >
             <Grid Margin="10,10,10,10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="200*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="30"/>
+                        <RowDefinition  />
+                        <RowDefinition  />
 
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <materialDesign:PackIcon Kind="Application" Height="28" Width="27" Grid.ColumnSpan="2" Margin="0,2,0,0" />
+                        <materialDesign:PackIcon Kind="BadgeAccountHorizontalOutline" 
+                                                     Height="28" Width="35" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     BorderThickness="0 0 1 0 "/>
                         <TextBox  AcceptsReturn="True" BorderThickness="0"
-                                        VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="594" 
-                                        FontSize="25" FontFamily="Segoe UI Light" Margin="35,0,0,0" />
+                                        HorizontalAlignment="Left" Width="634" 
+                                        FontSize="25" FontFamily="Times New Roman" Margin="40,0,0,0" />
                     </Grid>
                     <TextBox  Grid.Row="1"  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
                                         Foreground="Black"                            
                                         TextWrapping="Wrap"
-                                        HorizontalAlignment="Left" Width="594" 
-                                        FontSize="12" FontFamily="Segoe UI Light" Margin="35,0,0,0" />
+                                        HorizontalAlignment="Left" Width="589" 
+                                        FontSize="12" FontFamily="Times New Roman" Margin="40,0,0,0"/>
                 </Grid>
 
                 <Grid Grid.Row="1" >
@@ -59,6 +62,9 @@
                     <!--cột 1-->
                     <Grid Grid.Column="0" Background="WhiteSmoke" Margin="0,20,10,0">
                         <Grid.RowDefinitions>
+                            <!--mổ tả-->
+                            <RowDefinition Height="35"></RowDefinition>
+                            <RowDefinition></RowDefinition>
                             <RowDefinition Height="35"></RowDefinition>
                             <RowDefinition></RowDefinition>
                             <RowDefinition Height="35"></RowDefinition>
@@ -68,40 +74,133 @@
 
                         <Grid Grid.Row="0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="26"/>
+                                <ColumnDefinition Width="32"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="FileDocumentEditOutline" Height="28" Width="27" Grid.ColumnSpan="2" Margin="0,2,0,0" />
-                            <Label Grid.Column="1" FontSize="20" FontFamily="Microsoft Sans Serif" Margin=" 15 0 0 0">Mô tả</Label>
+                            <materialDesign:PackIcon Kind="FileDocumentEditOutline" 
+                                                     Height="28" Width="32" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     BorderThickness="0 0 1 0 "/>
+                            <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin="5,0,0,0">Thông tin khách hàng</Label>
                         </Grid>
 
-                        <!--mô tả-->
+                        <!--Thông tin khách hàng-->
                         <Grid Grid.Row="1" Margin="25,0,0,0">
-                            <!--<TextBox  BorderBrush="#6699FF" Background="#EEEEEE" Grid.Column="0" materialDesign:HintAssist.Hint="Thêm mô tả chi tiết hơn..."
-                                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"  Width="auto"
-                                    TextWrapping="Wrap"
-                                    VerticalAlignment="Center" Height="150" Margin="0,16,10,17" />-->
-                            <TextBox  AcceptsReturn="True" BorderThickness="0"
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <!--Tên-->
+                            <Grid Grid.Row="0" Margin=" 0 5 0 5">
+                                <Label Margin="14 0 0 0" FontWeight="Black" FontSize="13" FontFamily="Times New Roman">Tên khách hàng :</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="350"
+                                        HorizontalAlignment="Left" Width="327"
                                     
-                                        FontSize="15" FontFamily="Segoe UI Light" Margin="35,0,0,0" />
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+
+                            <!--Địa chỉ-->
+                            <Grid Grid.Row="1" Margin=" 0 5 0 5">
+                                <!--<Border BorderBrush="Black" BorderThickness="0 0 0 1"/>-->
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Địa chỉ:</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="327"
+                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+                            <!--Loại máy-->
+                            <Grid Grid.Row="2" Margin=" 0 5 0 5">
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Loại máy :</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="327"
+                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+                            <!--Tình trạng máy-->
+                            <Grid Grid.Row="3" Margin=" 0 5 0 5">
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Tình trạng máy :</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="327"
+                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+                            <!--Ngày bảo hành-->
+                            <Grid Grid.Row="4" Margin=" 0 5 0 5">
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Ngày bảo hành :</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="327"
+                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+                            <!--Khác-->
+                            <Grid Grid.Row="5" Margin=" 0 5 0 5">
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Khác :</Label>
+                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="327"
+                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
                         </Grid>
 
 
+
+
+                        <!--Checklist-->
                         <Grid Grid.Row="2">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="26"/>
+                                <ColumnDefinition Width="32"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="CommentMultipleOutline" Height="28" Width="27" Grid.ColumnSpan="2" Margin="0,2,0,0" />
-                            <Label Grid.Column="1" FontSize="20" FontFamily="Microsoft Sans Serif" Margin=" 15 0 0 0">Hoạt động</Label>
+                            <materialDesign:PackIcon Kind="FormatListCheckbox" 
+                                                     Height="28" Width="32" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     BorderThickness="0 0 1 0 "/>
+
+                            <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin=" 5 0 0 0">CheckList</Label>
+                        </Grid>
+                        <Grid Grid.Row="3">
+
                         </Grid>
 
                         <!--Hoạt Động-->
-                        <Grid Grid.Row="3" Margin="25,0,0,0">
+                        <Grid Grid.Row="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon Kind="CommentMultipleOutline" 
+                                                     Height="28" Width="32" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     BorderThickness="0 0 1 0 "/>
+                            <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin=" 5 0 0 0">Hoạt động</Label>
+                        </Grid>
+
+                        <Grid Grid.Row="5" Margin="25,0,0,0">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
@@ -116,16 +215,18 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Grid Grid.Column="0">
-                                    <materialDesign:PackIcon Kind="AccountCircle" Height="32" Width="30" />
+                                    <materialDesign:PackIcon Kind="AccountCircleOutline" Height="32" Width="30" />
                                 </Grid>
                                 <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
-                                    <TextBox Grid.Row="0" Margin="0,0,10,0" materialDesign:HintAssist.Hint="Viết bình luận..."
-                                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                             TextWrapping="Wrap" AcceptsReturn="True" >
+                                    <TextBox Grid.Row="0" Margin="10,0" 
+                                             materialDesign:HintAssist.Hint="Viết bình luận..."
+                                             materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                             TextWrapping="Wrap" AcceptsReturn="True"
+                                             Width="370">
                                         <TextBox.Effect>
                                             <DropShadowEffect ShadowDepth="4"
                                                   Direction="330"
@@ -171,14 +272,14 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <materialDesign:PackIcon Kind="ToolboxOutline" Height="23" Width="26" Margin="0,2,0,0" />
-                            <Label Grid.Column="1" FontSize="15" FontFamily="Microsoft Sans Serif" Margin=" 15 0 0 0">THÊM VÀO THẺ</Label>
+                            <Label Grid.Column="1" FontSize="15" FontFamily="Times New Roman" Margin=" 15 0 0 0">THÊM VÀO THẺ</Label>
 
                         </Grid>
                         <Button Grid.Row="1"
                                 materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Foreground="Black"
-                                FontFamily="Angsana New"
+                                FontFamily="Times New Roman"
                                 Content="Thành viên"
                                 Background="#87CEEB">
                         </Button>
@@ -189,7 +290,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
-                                FontFamily="Angsana New"
+                                FontFamily="Times New Roman"
                                 Content="Nhãn"
                                 Background="#87CEEB">
                         </Button>
@@ -200,7 +301,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
-                                FontFamily="Angsana New"
+                                FontFamily="Times New Roman"
                                 Content="Ngày"
                                 Background="#87CEEB">
                         </Button>
@@ -210,7 +311,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
-                                FontFamily="Angsana New"
+                                FontFamily="Times New Roman"
                                 Content="Việc cần làm"
                                 Background="#87CEEB">
                         </Button>
@@ -220,7 +321,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
-                                FontFamily="Angsana New"
+                                FontFamily="Times New Roman"
                                 Content="Đính kèm"
                                 Background="#87CEEB">
                         </Button>
