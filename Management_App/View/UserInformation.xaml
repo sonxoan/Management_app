@@ -15,7 +15,7 @@
          FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="ThreeDBorderWindow"
         ResizeMode="CanResize"
-        Title="UserInformation" Height="1000" Width="1200" WindowStartupLocation="CenterScreen" >
+        Title="UserInformation" Height="1200" Width="1200" WindowStartupLocation="CenterOwner" >
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -443,9 +443,8 @@
                                 </Grid>
                             </Grid>
                         </Grid>
-                         
+
                         <Grid Grid.Row="3" Margin="0 20 0 0 ">
-                            
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -462,8 +461,19 @@
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
                                            FontWeight="Bold"/>
-                                
-                                
+                                <ComboBox Grid.Row="1"
+                                          Width="200"
+                                          Height="30"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top">
+                                    <ComboBoxItem Content="" IsSelected="True"/>
+                                    <ComboBoxItem Content="10" />
+                                    <ComboBoxItem Content="12" />
+                                    <ComboBoxItem Content="14" />
+                                    <ComboBoxItem Content="16" />
+                                </ComboBox>
+
+
                             </Grid>
                             <!--Thu nhập-->
                             <Grid Grid.Column="1">
@@ -471,7 +481,7 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Text="Phân loại" FontSize="20"
+                                <TextBlock Grid.Row="0" Text="Thu nhập" FontSize="20"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
                                            FontWeight="Bold"/>
@@ -484,7 +494,7 @@
                                     <RowDefinition/>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Text="Phân loại" FontSize="20"
+                                <TextBlock Grid.Row="0" Text="Tính cách" FontSize="20"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
                                            FontWeight="Bold"/>
@@ -567,6 +577,8 @@
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
                             <RowDefinition />
+                            <RowDefinition />
+
 
 
                         </Grid.RowDefinitions>
@@ -639,78 +651,104 @@
 
 
                         <!--checklist-->
-                        <Grid Grid.Row="7">
-                            <Grid>
-                                <TreeView>
-                                    <materialDesign:TreeViewAssist.AdditionalTemplate>
-                                        <DataTemplate>
-                                            <materialDesign:ColorZone
+                        <Grid Grid.Row="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Margin="0 5 0 0">
+                                <materialDesign:PackIcon Kind="FormatListCheckbox" 
+                                                     Height="28" Width="32" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     />
+                                <Label  FontSize="20" FontFamily="Times New Roman" Margin="35,0,0,0">Việc cần làm.</Label>
+                            </Grid>
+
+                            <TreeView Grid.Row="1">
+                                <materialDesign:TreeViewAssist.AdditionalTemplate>
+                                    <DataTemplate>
+                                        <materialDesign:ColorZone
                                             Mode="PrimaryLight"
                                             CornerRadius="6">
-                                            </materialDesign:ColorZone>
-                                        </DataTemplate>
-                                    </materialDesign:TreeViewAssist.AdditionalTemplate>
+                                        </materialDesign:ColorZone>
+                                    </DataTemplate>
+                                </materialDesign:TreeViewAssist.AdditionalTemplate>
 
-                                    <TreeViewItem>
-                                        <TreeViewItem.Header>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBox  AcceptsReturn="True" BorderThickness="0"                                                    
+                                <TreeViewItem>
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox  AcceptsReturn="True" BorderThickness="0"                                                    
                                                       VerticalAlignment="Top"
                                                       TextWrapping="Wrap"
                                                       Foreground="Black"
                                                       HorizontalAlignment="Left" Width="200"                                    
                                                       FontSize="16" FontFamily="Times New Roman" />
-                                                <Button Height="30" Width="50" 
+                                            <Button Height="30" Width="50" 
                                                     BorderBrush="Transparent" 
                                                     Background="Transparent"
                                                     Margin="10,0,0,0" >
-                                                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
                                                          Kind="PlaylistPlus"
                                                          Foreground="Black"
                                                          Height="20" Width="20"/>
-                                                    <Button.Style>
-                                                        <Style TargetType="Button">
-                                                            <Style.Triggers>
-                                                                <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Background" Value="#CFCFCF"/>
-                                                                </Trigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </Button.Style>
-                                                </Button>
-                                                <Button Height="30" Width="50" 
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="#CFCFCF"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <Button Height="30" Width="50" 
                                                     BorderBrush="Transparent" 
                                                     Background="Transparent"
                                                     Margin="10,0,0,0" >
-                                                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
                                                          Kind="Delete"
                                                          Foreground="Black"
                                                          Height="20" Width="20"/>
-                                                    <Button.Style>
-                                                        <Style TargetType="Button">
-                                                            <Style.Triggers>
-                                                                <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Background" Value="#CFCFCF"/>
-                                                                </Trigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </Button.Style>
-                                                </Button>
-                                            </StackPanel>
-                                        </TreeViewItem.Header>
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="#CFCFCF"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
 
-                                        <CheckBox                                                                             
+                                    <CheckBox                                                                             
                                         Content="................"
                                         Style="{StaticResource MaterialDesignCheckBox}" />
-                                        <Button BorderBrush="#CFCFCF" Background="Transparent" 
+                                    <Button BorderBrush="#CFCFCF" Background="Transparent" 
                                             BorderThickness="1" Width="200" Click="Button_Click" >
-                                            <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
-                                        </Button>
-
-                                    </TreeViewItem>
-                                </TreeView>
+                                        <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
+                                    </Button>
+                                </TreeViewItem>
+                            </TreeView>
+                        </Grid>
+                    <!--Lịch sử-->
+                        <Grid Grid.Row="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Margin="0 5 0 0">
+                                <materialDesign:PackIcon Kind="History" 
+                                                     Height="28" Width="32" 
+                                                     Margin="0,2,0,0" 
+                                                     BorderBrush="Black"
+                                                     />
+                                <Label  FontSize="20" FontFamily="Times New Roman" Margin="35,0,0,0">Lịch sử.</Label>
                             </Grid>
                         </Grid>
+                    
                     </Grid>
                 </Grid>
             </Grid>
