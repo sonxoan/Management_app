@@ -15,11 +15,11 @@
          FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="ToolWindow"
         ResizeMode="NoResize"
-        Title="UserInformation" Height="800" Width="710" WindowStartupLocation="CenterScreen" >
+        Title="UserInformation" Height="800" Width="900" WindowStartupLocation="CenterScreen" >
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
-        <Grid Background="	#CCFFCC" >
+        <Grid>
             <Grid Margin="10,10,10,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"></RowDefinition>
@@ -36,7 +36,7 @@
                                                      Height="28" Width="35" 
                                                      Margin="0,2,0,0" 
                                                      BorderBrush="Black"
-                                                     BorderThickness="0 0 1 0 "/>
+                                                     />
                         <TextBox  AcceptsReturn="True" BorderThickness="0"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
@@ -60,7 +60,7 @@
 
 
                     <!--cột 1-->
-                    <Grid Grid.Column="0" Background="WhiteSmoke" Margin="0,20,10,0">
+                    <Grid Grid.Column="0" Background="#CFCFCF" Margin="0,20,10,0">
                         <Grid.RowDefinitions>
                             <!--mổ tả-->
                             <RowDefinition Height="35"></RowDefinition>
@@ -81,7 +81,7 @@
                                                      Height="28" Width="32" 
                                                      Margin="0,2,0,0" 
                                                      BorderBrush="Black"
-                                                     BorderThickness="0 0 1 0 "/>
+                                                     />
                             <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin="5,0,0,0">Thông tin khách hàng</Label>
                         </Grid>
 
@@ -94,23 +94,44 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                                <RowDefinition Height="60"/>
+
                             </Grid.RowDefinitions>
                             <!--Tên-->
                             <Grid Grid.Row="0" Margin=" 0 5 0 5">
-                                <Label Margin="14 0 0 0" FontWeight="Black" FontSize="13" FontFamily="Times New Roman">Tên khách hàng :</Label>
-                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <!--tên-->
+                                <Label Grid.Column="0" Margin="14 0 5 0" FontWeight="Black" FontSize="13" 
+                                       FontFamily="Times New Roman"
+                                       BorderBrush="Black" BorderThickness="0 0 1 0">Tên :</Label>
+                                <TextBox Grid.Column="0"  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
-                                    
+                                        HorizontalAlignment="Left" Width="200"                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="55,0,0,0" />
+                                <!--mã khách hàng-->
+                                <Label Grid.Column="1" Margin="14 0 0 0" FontWeight="Black" FontSize="13" 
+                                       FontFamily="Times New Roman">Mã khách hàng:</Label>
+                                <TextBox Grid.Column="1"  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="150"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
+
 
                             <!--Địa chỉ-->
                             <Grid Grid.Row="1" Margin=" 0 5 0 5">
                                 <!--<Border BorderBrush="Black" BorderThickness="0 0 0 1"/>-->
-                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Địa chỉ:</Label>
+                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Địa chỉ :</Label>
                                 <TextBox  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
@@ -119,30 +140,111 @@
                                     
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
-                            <!--Loại máy-->
+                            <!-- thông tin máy-->
                             <Grid Grid.Row="2" Margin=" 0 5 0 5">
-                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Loại máy :</Label>
-                                <TextBox  AcceptsReturn="True" BorderThickness="0"
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <!--loại máy-->
+                                <Label Grid.Column="0" Margin="14 0 5 0"  FontSize="13" 
+                                       FontFamily="Times New Roman" BorderBrush="Black" BorderThickness="0 0 1 0">Loại máy :</Label>
+                                <TextBox Grid.Column="0"  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
-                                    
+                                        HorizontalAlignment="Left" Width="180"                                    
+                                        FontSize="16" FontFamily="Times New Roman" Margin="83,0,0,0" />
+                                <!--tình trạng máy-->
+                                <Label Grid.Column="1" Margin="14 0 0 0" FontSize="13" 
+                                       FontFamily="Times New Roman">Tình trạng máy :</Label>
+                                <TextBox Grid.Column="1"  AcceptsReturn="True" BorderThickness="0"
+                                        VerticalAlignment="Top"
+                                        TextWrapping="Wrap"
+                                        Foreground="Black"
+                                        HorizontalAlignment="Left" Width="150"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
-                            <!--Tình trạng máy-->
-                            <Grid Grid.Row="3" Margin=" 0 5 0 5">
-                                <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Tình trạng máy :</Label>
-                                <TextBox  AcceptsReturn="True" BorderThickness="0"
-                                        VerticalAlignment="Top"
-                                        TextWrapping="Wrap"
-                                        Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
-                                    
-                                        FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            <!--thông tin lõi-->                           
+                            <Grid Grid.Row="4" Margin=" 0 5 0 5" Background="Blue">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" HorizontalAlignment="Center">
+                                    <Label Margin="14 0 0 0" FontSize="18" 
+                                       FontFamily="Times New Roman">Thông tin lõi :</Label>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <!--cột 1-->
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <!--lõi 1-->
+                                        <ProgressBar Grid.Row="0" Height="35"
+                                                     Maximum="100" Minimum="0" 
+                                                     Value="10"
+                                                     Margin="5 5 5 5" Foreground="Red"
+                                                     Name="pbStatus"/>
+                                        <TextBlock Grid.Row="0"
+                                                   FontWeight="Black"
+                                                   Text="Lõi 1" VerticalAlignment="Center"
+                                                   Margin="10 0 0 0"/>
+                                        <TextBlock Grid.Row="0"
+                                                    Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" 
+                                                    HorizontalAlignment="Center" 
+                                                    VerticalAlignment="Center" />
+                                        <Button Grid.Row="0" Margin="5 5 5 5"  Height="35" 
+                                                Background="Transparent" 
+                                                BorderBrush="Transparent" Click="Button_Click"/>
+                                        <!--lõi 2-->
+                                        <ProgressBar Grid.Row="1" Height="35"
+                                                     Maximum="100" Minimum="0" Value="60"
+                                                     Margin="5 5 5 5" Foreground="Green"
+                                                     Name="pbLoi2"/>
+                                        <TextBlock Grid.Row="1"
+                                                   FontWeight="Black"
+                                                   Text="Lõi 2" VerticalAlignment="Center"
+                                                   Margin="10 0 0 0"/>
+                                        <TextBlock Grid.Row="1"
+                                            Text="{Binding ElementName=pbLoi2, Path=Value, StringFormat={}{0:0}%}" 
+                                                    HorizontalAlignment="Center" 
+                                                    VerticalAlignment="Center" />
+                                        <Button Grid.Row="1" Margin="5 5 5 5"  Height="35" 
+                                                Background="Transparent" 
+                                                BorderBrush="Transparent" Click="Button_Click"/>
+                                        <!--lõi 3-->
+                                        <Button Grid.Row="2" Margin="5 5 5 5"/>
+                                        <Button Grid.Row="3" Margin="5 5 5 5"/>
+
+                                    </Grid>
+                                    <!--cột 2-->
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        
+                                        <Button Grid.Row="0" Margin="5 5 5 5"/>
+                                        <Button Grid.Row="1" Margin="5 5 5 5"/>
+                                        <Button Grid.Row="2" Margin="5 5 5 5"/>
+                                        <Button Grid.Row="3" Margin="5 5 5 5"/>
+
+                                    </Grid>
+                                </Grid>
                             </Grid>
                             <!--Ngày bảo hành-->
-                            <Grid Grid.Row="4" Margin=" 0 5 0 5">
+                            <Grid Grid.Row="5" Margin=" 0 5 0 5">
                                 <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Ngày bảo hành :</Label>
                                 <TextBox  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
@@ -153,7 +255,7 @@
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
                             <!--Khác-->
-                            <Grid Grid.Row="5" Margin=" 0 5 0 5">
+                            <Grid Grid.Row="6" Margin=" 0 5 0 5">
                                 <Label Margin="14 0 0 0" FontSize="13" FontFamily="Times New Roman">Khác :</Label>
                                 <TextBox  AcceptsReturn="True" BorderThickness="0"
                                         VerticalAlignment="Top"
@@ -162,6 +264,21 @@
                                         HorizontalAlignment="Left" Width="327"
                                     
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
+                            </Grid>
+                            <Grid Grid.Row="7" >
+                                <Border BorderBrush="black" BorderThickness="0 1 0 0"/>
+                                <Grid HorizontalAlignment="Right" Margin="0 0 30 0">
+                                    <Button HorizontalAlignment="Center"
+                                            Height="40" Width="150"
+                                            materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                            BorderThickness="1"
+                                            Background="#00FFFF">
+                                    </Button>
+                                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Kind="PhoneHangup"
+                                                         Foreground="White"
+                                                         Height="31" Width="27"/>
+                                </Grid>
                             </Grid>
                         </Grid>
 
@@ -172,18 +289,112 @@
                         <Grid Grid.Row="2">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="32"/>
+                                <ColumnDefinition Width="110"/>
                                 <ColumnDefinition/>
+
                             </Grid.ColumnDefinitions>
                             <materialDesign:PackIcon Kind="FormatListCheckbox" 
                                                      Height="28" Width="32" 
                                                      Margin="0,2,0,0" 
                                                      BorderBrush="Black"
-                                                     BorderThickness="0 0 1 0 "/>
+                                                     />
 
-                            <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin=" 5 0 0 0">CheckList</Label>
+                            <Label Grid.Column="1" FontSize="20" 
+                                   FontFamily="Times New Roman" 
+                                   Margin=" 5 0 0 0">CheckList</Label>
+                            <ProgressBar Grid.Column="2" 
+                                        
+                                         Background="White"
+                                         Foreground="#54FF9F"
+                                         Height="10" 
+                                         Width="150"                                       
+                                         HorizontalAlignment="Left"
+                                         Margin="20 0 0 0 "
+                                         Minimum="0"
+                                         Maximum="100"
+                                         Value="70" />
                         </Grid>
                         <Grid Grid.Row="3">
+                            <TreeView>
+                                <materialDesign:TreeViewAssist.AdditionalTemplate>
+                                    <DataTemplate>
+                                        <materialDesign:ColorZone
+                                            Mode="PrimaryLight"
+                                            CornerRadius="6">
+                                        </materialDesign:ColorZone>
+                                    </DataTemplate>
+                                </materialDesign:TreeViewAssist.AdditionalTemplate>
 
+                                <TreeViewItem>
+                                    <TreeViewItem.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox  AcceptsReturn="True" BorderThickness="0"                                                    
+                                                      VerticalAlignment="Top"
+                                                      TextWrapping="Wrap"
+                                                      Foreground="Black"
+                                                      HorizontalAlignment="Left" Width="400"                                    
+                                                      FontSize="16" FontFamily="Times New Roman" />
+                                            <Button Height="30" Width="50" 
+                                                    BorderBrush="Transparent" 
+                                                    Background="Transparent"
+                                                    Margin="10,0,0,0" >
+                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Kind="PlaylistPlus"
+                                                         Foreground="White"
+                                                         Height="20" Width="20"/>
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="#CFCFCF"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <Button Height="30" Width="50" 
+                                                    BorderBrush="Transparent" 
+                                                    Background="Transparent"
+                                                    Margin="10,0,0,0" >
+                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Kind="Delete"
+                                                         Foreground="White"
+                                                         Height="20" Width="20"/>
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="#CFCFCF"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+
+                                    <CheckBox                                                                             
+                                        Content="................"
+                                        Style="{StaticResource MaterialDesignCheckBox}" />
+                                    <CheckBox                                                                             
+                                        Content="................"
+                                        Style="{StaticResource MaterialDesignCheckBox}" />
+                                    <CheckBox                                                                             
+                                        Content="................"
+                                        Style="{StaticResource MaterialDesignCheckBox}" />
+                                    <CheckBox                                                                             
+                                        Content="................"
+                                        Style="{StaticResource MaterialDesignCheckBox}" />
+                                    <Button BorderBrush="#CFCFCF" Background="Transparent" 
+                                            BorderThickness="1" Width="200" Click="Button_Click" >
+                                        <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
+                                    </Button>
+                                    <Button BorderBrush="#CFCFCF" Background="Transparent" 
+                                            BorderThickness="1" Width="200" Click="Button_Click" >
+                                        <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
+                                    </Button>
+                                </TreeViewItem>
+                            </TreeView>
                         </Grid>
 
                         <!--Hoạt Động-->
@@ -196,7 +407,7 @@
                                                      Height="28" Width="32" 
                                                      Margin="0,2,0,0" 
                                                      BorderBrush="Black"
-                                                     BorderThickness="0 0 1 0 "/>
+                                                     />
                             <Label Grid.Column="1" FontSize="20" FontFamily="Times New Roman" Margin=" 5 0 0 0">Hoạt động</Label>
                         </Grid>
 
@@ -222,19 +433,11 @@
                                         <RowDefinition/>
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
-                                    <TextBox Grid.Row="0" Margin="10,0" 
+                                    <TextBox Grid.Row="0" Margin="10,0,80,0" 
+                                             Width="400"
                                              materialDesign:HintAssist.Hint="Viết bình luận..."
                                              materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                             TextWrapping="Wrap" AcceptsReturn="True"
-                                             Width="370">
-                                        <TextBox.Effect>
-                                            <DropShadowEffect ShadowDepth="4"
-                                                  Direction="330"
-                                                  Color="Black"
-                                                  Opacity="1"
-                                                  BlurRadius="5"/>
-                                        </TextBox.Effect>
-                                    </TextBox>
+                                             TextWrapping="Wrap" AcceptsReturn="True"/>
                                     <Grid Grid.Row="1" Margin="0 5 0 0 ">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="3*"/>
@@ -262,10 +465,11 @@
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
                             <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition />
+
 
                         </Grid.RowDefinitions>
-
+                        <!--Tiêu đề-->
                         <Grid Grid.Row="0" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="26"/>
@@ -275,71 +479,67 @@
                             <Label Grid.Column="1" FontSize="15" FontFamily="Times New Roman" Margin=" 15 0 0 0">THÊM VÀO THẺ</Label>
 
                         </Grid>
+                        <!--thành viên-->
                         <Button Grid.Row="1"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                BorderBrush="Transparent"
                                 BorderThickness="1"
                                 Foreground="Black"
                                 FontFamily="Times New Roman"
                                 Content="Thành viên"
-                                Background="#87CEEB">
+                                Background="#87CEEB" Height="Auto" Margin="0,5,0,5">
                         </Button>
                         <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="1" 
                                                  Kind="AccountOutline" Height="23" Width="22" Margin="8 14 0 14" />
-
+                        <!--nhãn-->
                         <Button Grid.Row="2"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                 BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
                                 FontFamily="Times New Roman"
                                 Content="Nhãn"
-                                Background="#87CEEB">
+                                Background="#87CEEB" Height="Auto" Margin="0,5,0,5">
                         </Button>
                         <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="2" 
                                                  Kind="TagOutline" Height="23" Width="22" Margin="8 14 0 14" />
-
+                        <!--Ngày-->
                         <Button Grid.Row="3"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
                                 FontFamily="Times New Roman"
                                 Content="Ngày"
-                                Background="#87CEEB">
+                                Background="#87CEEB"  Height="Auto" Margin="0,5,0,5">
                         </Button>
                         <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="3" 
                                                  Kind="ClockTimeTwoOutline" Height="23" Width="22" Margin="8 14 0 14" />
+                        <!--việc cần làm-->
                         <Button Grid.Row="4"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
                                 FontFamily="Times New Roman"
                                 Content="Việc cần làm"
-                                Background="#87CEEB">
+                                Background="#87CEEB" Height="Auto" Margin="0,5,0,5">
                         </Button>
                         <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="4" 
                                                  Kind="CheckboxMarkedOutline" Height="23" Width="22" Margin="8 14 0 14" />
+                        <!--Đính kèm-->
                         <Button Grid.Row="5"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
+                                BorderBrush="Transparent"
                                 BorderThickness="1"
                                  Foreground="Black"
                                 FontFamily="Times New Roman"
                                 Content="Đính kèm"
-                                Background="#87CEEB">
+                                Background="#87CEEB" Height="Auto" Margin="0,5,0,5">
                         </Button>
                         <materialDesign:PackIcon VerticalAlignment="Center" Grid.Row="5"
                                                  Kind="Paperclip" Height="23" Width="22" Margin="8 14 0 14" />
 
 
-                        <Grid Grid.Row="6">
-                            <Border BorderBrush="Black" BorderThickness="0 1 0 0 "></Border>
-                            <Button 
-                                HorizontalAlignment="Center"
-                                Height="40" Width="150"
-                                materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
-                                BorderThickness="1"
-                                Background="#00FFFF">
-                            </Button>
-                            <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                 Kind="PhoneHangup" Height="31" Width="27"  />
+
+                        <!--Lịch sử-->
+                        <Grid Grid.Row="7">
+
                         </Grid>
                     </Grid>
                 </Grid>

@@ -24,6 +24,14 @@ namespace Management_App.View
             InitializeComponent();
         }
 
-     
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("bạn đã thành cong");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
