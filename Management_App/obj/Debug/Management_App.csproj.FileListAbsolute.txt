@@ -58,3 +58,5 @@ D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.csproj.CoreCo
 D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.csproj.CopyComplete
 D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.exe
 D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.pdb
+D:\deskstop\Management_App\Management_App\obj\Debug\View\BoardPage.g.cs
+D:\deskstop\Management_App\Management_App\obj\Debug\View\BoardPage.baml
