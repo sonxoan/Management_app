@@ -13,9 +13,9 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        WindowStyle="ToolWindow"
-        ResizeMode="NoResize"
-        Title="UserInformation" Height="800" Width="900" WindowStartupLocation="CenterScreen" >
+        WindowStyle="ThreeDBorderWindow"
+        ResizeMode="CanResize"
+        Title="UserInformation" Height="1000" Width="1200" WindowStartupLocation="CenterScreen" >
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -65,7 +65,7 @@
                             <!--mổ tả-->
                             <RowDefinition Height="35"></RowDefinition>
                             <RowDefinition></RowDefinition>
-                            <RowDefinition Height="35"></RowDefinition>
+                            <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                             <RowDefinition Height="35"></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -95,7 +95,6 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                                 <RowDefinition/>
-                                <RowDefinition/>
 
                                 <RowDefinition Height="60"/>
 
@@ -114,7 +113,7 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="200"                                    
+                                        HorizontalAlignment="Left" Width="270"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="55,0,0,0" />
                                 <!--mã khách hàng-->
                                 <Label Grid.Column="1" Margin="14 0 0 0" FontWeight="Black" FontSize="13" 
@@ -123,7 +122,7 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="150"                                    
+                                        HorizontalAlignment="Left" Width="230"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
 
@@ -136,7 +135,7 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
+                                        HorizontalAlignment="Left" Width="500"
                                     
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
@@ -153,7 +152,7 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="180"                                    
+                                        HorizontalAlignment="Left" Width="250"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="83,0,0,0" />
                                 <!--tình trạng máy-->
                                 <Label Grid.Column="1" Margin="14 0 0 0" FontSize="13" 
@@ -162,10 +161,10 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="150"                                    
+                                        HorizontalAlignment="Left" Width="230"                                    
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
-                            <!--thông tin lõi-->                           
+                            <!--thông tin lõi-->
                             <Grid Grid.Row="4" Margin=" 0 5 0 5" Background="Blue">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -234,7 +233,7 @@
                                             <RowDefinition/>
                                             <RowDefinition/>
                                         </Grid.RowDefinitions>
-                                        
+
                                         <Button Grid.Row="0" Margin="5 5 5 5"/>
                                         <Button Grid.Row="1" Margin="5 5 5 5"/>
                                         <Button Grid.Row="2" Margin="5 5 5 5"/>
@@ -250,7 +249,7 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
+                                        HorizontalAlignment="Left" Width="600"
                                     
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
@@ -261,13 +260,13 @@
                                         VerticalAlignment="Top"
                                         TextWrapping="Wrap"
                                         Foreground="Black"
-                                        HorizontalAlignment="Left" Width="327"
+                                        HorizontalAlignment="Left" Width="600"
                                     
                                         FontSize="16" FontFamily="Times New Roman" Margin="123,0,0,0" />
                             </Grid>
                             <Grid Grid.Row="7" >
                                 <Border BorderBrush="black" BorderThickness="0 1 0 0"/>
-                                <Grid HorizontalAlignment="Right" Margin="0 0 30 0">
+                                <Grid HorizontalAlignment="Right" Margin="0 10 30 10">
                                     <Button HorizontalAlignment="Center"
                                             Height="40" Width="150"
                                             materialDesign:ButtonAssist.CornerRadius="5" BorderBrush="Transparent"
@@ -281,121 +280,220 @@
                                 </Grid>
                             </Grid>
                         </Grid>
-
-
-
-
-                        <!--Checklist-->
+                        <!--Phân tích khách hàng-->
                         <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <!--Giờ gọi-->
+                            <TextBlock Grid.Row="0" Text="Giờ gọi"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="20 0 0 0"
+                                       FontSize="28"/>
+                            <Grid Grid.Row="1" Margin="0 10 0 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <!--timeline 1-->
+                                <Grid Grid.Column="0" >
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Kind="ClockTimeEightOutline"
+                                                             VerticalAlignment="Center"
+                                                             Height="23" Width="20" Margin="10,0,0,0" />
+                                    <RadioButton GroupName="Giogoi"
+                                                 Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                 Content="8h - 10h"
+                                                 FontFamily="Times New Roman"
+                                                 FontSize="20"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                </Grid>
+                                    <!--timeline 2-->
+                                <Grid Grid.Column="1">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Grid.Column="1" Kind="ClockTimeTenOutline"
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+
+                                    <RadioButton GroupName="Giogoi"
+                                                 Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                 Content="10h - 12h"
+                                                 FontFamily="Times New Roman"
+                                                 FontSize="20"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                </Grid>
+                                <!--timeline 3-->
+                                <Grid Grid.Column="2">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+
+                                    <materialDesign:PackIcon Grid.Column="2" Kind="ClockTimeTwoOutline"
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+                                   
+                                    <RadioButton Grid.Column="2"
+                                                  GroupName="Giogoi"
+                                                  Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                  Content="14h - 16h"
+                                                  FontFamily="Times New Roman"
+                                                  FontSize="20"
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                                </Grid>
+                                <!--timeline 4-->
+                                <Grid Grid.Column="3">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Grid.Column="3" Kind="ClockTimeFourOutline" 
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+
+                                    <RadioButton Grid.Column="3"
+                                                 GroupName="Giogoi"
+                                                 Style="{DynamicResource MaterialDesignToolRadioButton}"           
+                                                 Content="16h - 17h30"
+                                                 FontFamily="Times New Roman"
+                                                 FontSize="20"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                            <!--giờ đi-->
+                            <TextBlock Grid.Row="2" Text="Giờ đi"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="20 0 0 0"
+                                       FontSize="28"/>
+                            <Grid Grid.Row="3" Margin="0 10 0 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <!--timeline 1-->
+                                <Grid Grid.Column="0" >
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Kind="ClockTimeEightOutline"
+                                                             VerticalAlignment="Center"
+                                                             Height="23" Width="20" Margin="10,0,0,0" />
+                                    <RadioButton GroupName="Giodi"
+                                                 Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                 Content="8h - 10h"
+                                                 FontFamily="Times New Roman"
+                                                 FontSize="20"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                </Grid>
+                                <!--timeline 2-->
+                                <Grid Grid.Column="1">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Grid.Column="1" Kind="ClockTimeTenOutline"
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+
+                                    <RadioButton  GroupName="Giodi"
+                                                  Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                  Content="10h - 12h"
+                                                  FontFamily="Times New Roman"
+                                                  FontSize="20"
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>  
+                                </Grid>
+                                <!--timeline 3-->
+                                <Grid Grid.Column="2">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+
+                                    <materialDesign:PackIcon Grid.Column="2" Kind="ClockTimeTwoOutline"
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+
+                                    <RadioButton Grid.Column="2"
+                                                  GroupName="Giodi"
+                                                  Style="{DynamicResource MaterialDesignToolRadioButton}"
+                                                  Content="14h - 16h"
+                                                  FontFamily="Times New Roman"
+                                                  FontSize="20"
+                                                  VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                                </Grid>
+                                <!--timeline 4-->
+                                <Grid Grid.Column="3">
+                                    <Border BorderBrush="Black" BorderThickness=" 1 0 1 0"/>
+                                    <materialDesign:PackIcon Grid.Column="3" Kind="ClockTimeFourOutline" 
+                                                         VerticalAlignment="Center"
+                                                         Height="23" Width="20" Margin="10,0,0,0" />
+
+                                    <RadioButton Grid.Column="3"
+                                                 GroupName="Giodi"
+                                                 Style="{DynamicResource MaterialDesignToolRadioButton}"           
+                                                 Content="16h - 17h30"
+                                                 FontFamily="Times New Roman"
+                                                 FontSize="20"
+                                                 VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                         
+                        <Grid Grid.Row="3" Margin="0 20 0 0 ">
+                            
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="32"/>
-                                <ColumnDefinition Width="110"/>
                                 <ColumnDefinition/>
-
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="FormatListCheckbox" 
-                                                     Height="28" Width="32" 
-                                                     Margin="0,2,0,0" 
-                                                     BorderBrush="Black"
-                                                     />
+                            <Border Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness=" 0 1 0 0 "/>
+                            <!--phân loại KH-->
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="Phân loại" FontSize="20"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Bold"/>
+                                
+                                
+                            </Grid>
+                            <!--Thu nhập-->
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="Phân loại" FontSize="20"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Bold"/>
 
-                            <Label Grid.Column="1" FontSize="20" 
-                                   FontFamily="Times New Roman" 
-                                   Margin=" 5 0 0 0">CheckList</Label>
-                            <ProgressBar Grid.Column="2" 
-                                        
-                                         Background="White"
-                                         Foreground="#54FF9F"
-                                         Height="10" 
-                                         Width="150"                                       
-                                         HorizontalAlignment="Left"
-                                         Margin="20 0 0 0 "
-                                         Minimum="0"
-                                         Maximum="100"
-                                         Value="70" />
+
+                            </Grid>
+                            <!--Tính cách-->
+                            <Grid Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="Phân loại" FontSize="20"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Bold"/>
+
+
+                            </Grid>
                         </Grid>
-                        <Grid Grid.Row="3">
-                            <TreeView>
-                                <materialDesign:TreeViewAssist.AdditionalTemplate>
-                                    <DataTemplate>
-                                        <materialDesign:ColorZone
-                                            Mode="PrimaryLight"
-                                            CornerRadius="6">
-                                        </materialDesign:ColorZone>
-                                    </DataTemplate>
-                                </materialDesign:TreeViewAssist.AdditionalTemplate>
 
-                                <TreeViewItem>
-                                    <TreeViewItem.Header>
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBox  AcceptsReturn="True" BorderThickness="0"                                                    
-                                                      VerticalAlignment="Top"
-                                                      TextWrapping="Wrap"
-                                                      Foreground="Black"
-                                                      HorizontalAlignment="Left" Width="400"                                    
-                                                      FontSize="16" FontFamily="Times New Roman" />
-                                            <Button Height="30" Width="50" 
-                                                    BorderBrush="Transparent" 
-                                                    Background="Transparent"
-                                                    Margin="10,0,0,0" >
-                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                         Kind="PlaylistPlus"
-                                                         Foreground="White"
-                                                         Height="20" Width="20"/>
-                                                <Button.Style>
-                                                    <Style TargetType="Button">
-                                                        <Style.Triggers>
-                                                            <Trigger Property="IsMouseOver" Value="True">
-                                                                <Setter Property="Background" Value="#CFCFCF"/>
-                                                            </Trigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </Button.Style>
-                                            </Button>
-                                            <Button Height="30" Width="50" 
-                                                    BorderBrush="Transparent" 
-                                                    Background="Transparent"
-                                                    Margin="10,0,0,0" >
-                                                <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                         Kind="Delete"
-                                                         Foreground="White"
-                                                         Height="20" Width="20"/>
-                                                <Button.Style>
-                                                    <Style TargetType="Button">
-                                                        <Style.Triggers>
-                                                            <Trigger Property="IsMouseOver" Value="True">
-                                                                <Setter Property="Background" Value="#CFCFCF"/>
-                                                            </Trigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </Button.Style>
-                                            </Button>
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
 
-                                    <CheckBox                                                                             
-                                        Content="................"
-                                        Style="{StaticResource MaterialDesignCheckBox}" />
-                                    <CheckBox                                                                             
-                                        Content="................"
-                                        Style="{StaticResource MaterialDesignCheckBox}" />
-                                    <CheckBox                                                                             
-                                        Content="................"
-                                        Style="{StaticResource MaterialDesignCheckBox}" />
-                                    <CheckBox                                                                             
-                                        Content="................"
-                                        Style="{StaticResource MaterialDesignCheckBox}" />
-                                    <Button BorderBrush="#CFCFCF" Background="Transparent" 
-                                            BorderThickness="1" Width="200" Click="Button_Click" >
-                                        <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
-                                    </Button>
-                                    <Button BorderBrush="#CFCFCF" Background="Transparent" 
-                                            BorderThickness="1" Width="200" Click="Button_Click" >
-                                        <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
-                                    </Button>
-                                </TreeViewItem>
-                            </TreeView>
-                        </Grid>
 
                         <!--Hoạt Động-->
                         <Grid Grid.Row="4">
@@ -429,16 +527,19 @@
                                     <materialDesign:PackIcon Kind="AccountCircleOutline" Height="32" Width="30" />
                                 </Grid>
                                 <Grid Grid.Column="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="27*"/>
+                                        <ColumnDefinition Width="692*"/>
+                                    </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
-                                    <TextBox Grid.Row="0" Margin="10,0,80,0" 
-                                             Width="400"
+                                    <TextBox Grid.Row="0" Margin="70,0,194,0"
                                              materialDesign:HintAssist.Hint="Viết bình luận..."
                                              materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                             TextWrapping="Wrap" AcceptsReturn="True"/>
-                                    <Grid Grid.Row="1" Margin="0 5 0 0 ">
+                                             TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="1"/>
+                                    <Grid Grid.Row="1" Margin="0 5 0 0 " Grid.ColumnSpan="2">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="3*"/>
                                             <ColumnDefinition/>
@@ -537,9 +638,78 @@
 
 
 
-                        <!--Lịch sử-->
+                        <!--checklist-->
                         <Grid Grid.Row="7">
+                            <Grid>
+                                <TreeView>
+                                    <materialDesign:TreeViewAssist.AdditionalTemplate>
+                                        <DataTemplate>
+                                            <materialDesign:ColorZone
+                                            Mode="PrimaryLight"
+                                            CornerRadius="6">
+                                            </materialDesign:ColorZone>
+                                        </DataTemplate>
+                                    </materialDesign:TreeViewAssist.AdditionalTemplate>
 
+                                    <TreeViewItem>
+                                        <TreeViewItem.Header>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox  AcceptsReturn="True" BorderThickness="0"                                                    
+                                                      VerticalAlignment="Top"
+                                                      TextWrapping="Wrap"
+                                                      Foreground="Black"
+                                                      HorizontalAlignment="Left" Width="200"                                    
+                                                      FontSize="16" FontFamily="Times New Roman" />
+                                                <Button Height="30" Width="50" 
+                                                    BorderBrush="Transparent" 
+                                                    Background="Transparent"
+                                                    Margin="10,0,0,0" >
+                                                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Kind="PlaylistPlus"
+                                                         Foreground="Black"
+                                                         Height="20" Width="20"/>
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Background" Value="#CFCFCF"/>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                                <Button Height="30" Width="50" 
+                                                    BorderBrush="Transparent" 
+                                                    Background="Transparent"
+                                                    Margin="10,0,0,0" >
+                                                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Kind="Delete"
+                                                         Foreground="Black"
+                                                         Height="20" Width="20"/>
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Background" Value="#CFCFCF"/>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                            </StackPanel>
+                                        </TreeViewItem.Header>
+
+                                        <CheckBox                                                                             
+                                        Content="................"
+                                        Style="{StaticResource MaterialDesignCheckBox}" />
+                                        <Button BorderBrush="#CFCFCF" Background="Transparent" 
+                                            BorderThickness="1" Width="200" Click="Button_Click" >
+                                            <materialDesign:PackIcon Kind="Plus"  Foreground="Black" />
+                                        </Button>
+
+                                    </TreeViewItem>
+                                </TreeView>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
