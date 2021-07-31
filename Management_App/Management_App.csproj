@@ -69,6 +69,9 @@
     <Compile Include="View\BoardPage.xaml.cs">
       <DependentUpon>BoardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Card\CreateBoard.xaml.cs">
+      <DependentUpon>CreateBoard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserInformation.xaml.cs">
       <DependentUpon>UserInformation.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Card\card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Card\CreateBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

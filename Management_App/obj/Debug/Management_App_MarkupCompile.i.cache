@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\deskstop\Management_App\Management_App\App.xaml
-6-316600310
+7-1345046260
 
-11-1921217765
+12-1189405176
 15-1966256578
-View\BoardPage.xaml;View\Card\card.xaml;View\Card\list.xaml;View\color\color.xaml;View\MainWindow.xaml;View\UserInformation.xaml;
+View\BoardPage.xaml;View\Card\card.xaml;View\Card\CreateBoard.xaml;View\Card\list.xaml;View\color\color.xaml;View\MainWindow.xaml;View\UserInformation.xaml;
 
-False
+True
 

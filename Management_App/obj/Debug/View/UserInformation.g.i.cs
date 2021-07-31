@@ -113,7 +113,7 @@ namespace Management_App.View {
             return;
             case 5:
             
-            #line 730 "..\..\..\View\UserInformation.xaml"
+            #line 761 "..\..\..\View\UserInformation.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default

@@ -60,3 +60,5 @@ D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.exe
 D:\deskstop\Management_App\Management_App\obj\Debug\Management_App.pdb
 D:\deskstop\Management_App\Management_App\obj\Debug\View\BoardPage.g.cs
 D:\deskstop\Management_App\Management_App\obj\Debug\View\BoardPage.baml
+D:\deskstop\Management_App\Management_App\obj\Debug\View\Card\CreateBoard.g.cs
+D:\deskstop\Management_App\Management_App\obj\Debug\View\Card\CreateBoard.baml
